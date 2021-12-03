@@ -1,0 +1,42 @@
+.form{
+    width: 70vw;
+    background-color: $light-font;
+    padding: 50px 180px 80px;
+    margin: 20vh;
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+        margin: 10vh;
+        padding: 40px 80px;
+        width: 80vw;
+    }
+    @media only screen and (max-device-width: 768px) {
+        margin: 5vh;
+        padding: 40px 30px;
+        width: 80vw;
+    }
+}
+
+.form-header{
+    margin-bottom: 2vw;
+    text-align: center;
+    @media only screen and (max-device-width: 768px) {
+        margin-bottom: 5vw;
+    }
+}
+
+.form-control{
+    background: #EEF3FC;
+    border-radius: 0px;
+}
+
+    .form-control:focus{
+    border-color:#8792A7 ;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    outline: #8792A7 auto;
+    border-radius: 0px;
+    color: $dark-font;
+}
+
+.active{
+    color: $active-color;
+}

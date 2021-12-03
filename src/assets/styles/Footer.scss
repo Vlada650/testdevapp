@@ -1,0 +1,75 @@
+
+.footer {
+    flex-shrink: 0;
+    background-color: $dark-font;
+    display: flex;
+    justify-content: space-around;
+    padding: 5vh 10vw;
+    color: $light-font;
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+        flex-wrap: wrap;
+    }
+    @media only screen and (min-device-width: 480px) and (max-device-width: 768px) {
+        display: block;
+        padding: 5vw;
+    }
+    @media only screen and (max-device-width: 480px) {
+        display: block;
+        padding: 10vw;
+    }
+}
+
+.footer-header{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px; 
+    margin: 30px 0px;
+    @media only screen and (max-device-width: 480px) {
+        margin-bottom: 5vw;
+    }
+}
+
+.footer-text{    
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.contact{   
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.footer__contact{
+    width: 20vw;
+    margin-bottom: 20px;
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+        grid-template-columns: 1fr 4fr;
+    }
+    @media only screen and (max-device-width: 768px) {
+        grid-template-columns: 1fr 5fr;
+        width: 100%;
+    }
+}
+
+.img{
+    @media only screen and (max-device-width: 768px) {
+        width: 100px;
+        height: 25px;
+    }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    .footer__company{
+        width: 30vw;
+        margin-bottom: 20px;
+    }
+
+    .footer__adress{
+        display:flex;
+    }
+
+    .office-hours{
+        margin: 0px 100px;
+    }
+}

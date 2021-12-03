@@ -1,0 +1,239 @@
+.header{
+  margin: 2vh 5vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+li {
+  display: block;
+  transition-duration: 0.5s;
+	position: relative;
+	text-decoration: none;
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+
+ul li ul {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  transition: all 0.5s ease;
+  display: none;
+  padding-inline-start: 20px;
+  padding-inline-end: 20px;
+
+  @media only screen and (max-device-width: 1024px) {
+    position: relative;
+  }
+}
+    
+ul li:hover > ul,
+ul li ul:hover {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+  background-color: $light-font;
+  box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.04);
+}   
+
+.nav-link,
+.subnav-link{
+  color: $nonactive-color;
+  text-decoration: none;
+}
+
+.header-link,
+.header-link:hover,
+.nav-link:hover,
+.subnav-link:hover{
+  color: $dark-font;
+  text-decoration: none;
+}
+
+.light-btn-container__static{
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  border-radius: 0px;
+  background-color: $light-font;
+  border: 1px solid $dark-font;
+  height: 40px;
+  width: 95px;
+  cursor: pointer;
+}
+
+.light-btn-container__hover{
+  border-radius: 0px;
+  background-color: $light-font;
+  border: 1px solid $dark-font;
+  height: 40px;
+  width: 95px;
+  cursor: pointer;
+}
+
+.light-btn-container{
+  position: relative;
+  display: block;
+  height: 40px;
+  width: 95px;
+  border: 1px solid $dark-font;
+
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    right: 120px;
+  }
+}
+
+.light-btn-wrapper{
+  position: absolute;
+  top: 35px;
+  right: 50px;
+  height: 45px;
+  @media only screen and (min-device-width: 480px) and (max-device-width: 768px) {
+    display: none;
+  }
+  @media only screen and (max-device-width: 480px) {
+    display: none;
+  }
+}
+
+.subnav-link{
+  font-size: 12px;
+  border: none;
+  @media only screen and (max-device-width: 1024px) {
+    font-size: 20px;
+  }
+  @media only screen and (max-device-width: 480px) {
+    padding: 0;
+  }
+}
+.menu__text{
+  display: none;
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {  
+    display: block;
+    position: absolute;
+    right: 60px;
+    top: 40px;
+  }
+}
+
+.nav{
+  margin-top: -20px;
+  margin-right: 30vw;
+}
+
+#menu__toggle {
+  opacity: 0;
+}
+
+.menu__btn {
+  display: none;
+  align-items: center;  
+  position: absolute;
+  top: 40px;
+  right: 120px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 1;
+  transition: max-height 2s ease-in;
+  @media only screen and (max-device-width: 480px) {
+    display: flex;
+    top: 20px;
+    right: 10px;
+  }
+  @media only screen and (min-device-width: 480px) and (max-device-width: 768px) {
+    display: flex;
+    top: 20px;
+    right: 50px;
+  }
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {  
+    display: flex;
+  }
+}
+
+@media only screen and  (max-device-width: 1024px) {  
+    .menu__second-button {
+      cursor: pointer;
+      width: 90%;
+    }
+
+    .dropdown-toggle{
+      padding: 0px;
+    }
+    
+    .menu__btn > span,
+    .menu__btn > span::before,
+    .menu__btn > span::after {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: $nonactive-color;
+    }
+    
+    .menu__btn > span::before {
+      content: '';
+      top: -8px;
+    }
+    
+    .menu__btn > span::after {
+      content: '';
+      top: 8px;
+    }
+    
+    .menu__box {
+      display: none; 
+      position: relative;
+      visibility: hidden;
+      width: 100vw;
+      height: 100%;
+      margin: 100px 0px 0px;
+      list-style: none;
+      padding-left: 20px;    
+      transition-duration: .25s;
+    }
+    
+    #menu__toggle:checked ~ .menu__btn > span {
+      transform: rotate(45deg);
+    }
+    #menu__toggle:checked ~ .menu__btn > span::before {
+      top: 0;
+      transform: rotate(0);
+    }
+    #menu__toggle:checked ~ .menu__btn > span::after {
+      top: 0;
+      transform: rotate(90deg);
+    }
+    #menu__toggle:checked ~ .menu__box {
+      visibility: visible;
+      display: block;
+      left: -150px;
+      width: 70vw;
+    }
+    
+    .menu__btn > span,
+    .menu__btn > span::before,
+    .menu__btn > span::after {
+      transition-duration: .25s;
+    }
+
+    .nav-link:hover,
+    .subnav-link:hover {
+      color: $active-color;
+    }
+
+    .nav-link,
+    .subnav-link{
+      color: $dark-font;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 26px;
+      line-height: 32px;
+      border-bottom: 1px solid $nonactive-color;
+      padding: 30px;
+    }
+
+    .subnav-link{
+      border: none;
+    }
+}

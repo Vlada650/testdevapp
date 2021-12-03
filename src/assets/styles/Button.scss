@@ -1,0 +1,37 @@
+.dark-btn-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dark-btn-container__static{
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    border-radius: 0px;
+    background-color: $dark-font;
+    border: none;
+    height: 40px;
+    width: 211px;
+    cursor: pointer;
+    color: $light-font;
+}
+
+.dark-btn-container{
+    position: relative;
+    display: block;
+    height: 40px;
+    width: 211px;
+    border: 1px solid $dark-font;
+    color: $light-font;
+}
+
+.dark-btn-container__hover{ 
+    border-radius: 0px;
+    background-color: $dark-font;
+    border: none;
+    height: 40px;
+    width: 211px;
+    cursor: pointer;
+    color: $light-font;
+}

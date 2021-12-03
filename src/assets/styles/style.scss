@@ -1,0 +1,10 @@
+$active-color:#018FDE;
+$dark-font:#121212;
+$light-font: #FFFFFF;
+$nonactive-color: #8792A7;
+
+@import './Header.scss';
+@import './MainInfo.scss';
+@import './ContactForm.scss';
+@import './Button.scss';
+@import './Footer.scss';
