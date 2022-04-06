@@ -1,4 +1,4 @@
-# Test app for Digital Solutions LLC
+# Testapp
 
 Ссылка на макет:  https://www.figma.com/file/8POoiEO1lfUoOG8258rwbX/Devs?node-id=0:1
 
